@@ -23,13 +23,6 @@
     }
   },
   "projects": {
-    "sample-app": {
-      "tags": []
-    },
-    "sample-app-e2e": {
-      "tags": [],
-      "implicitDependencies": ["sample-app"]
-    },
     "peer-core": {
       "tags": []
     },
