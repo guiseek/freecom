@@ -4,10 +4,11 @@ import { Signaling } from './signaling'
 
 async function bootstrap() {
   const app = await NestFactory.create(Signaling, { logger: false })
-  const port = process.env.PORT || 3333
-  const message = `On http://localhost: ${port}`
+  app.useLogger(app.get(SignalingLogger))
+  const port = process.env.PORT || 3000
+  const message = `On http://localhost:${port}`
   await app.listen(port, () => {
-    SignalingLogger.log(message)
+    SignalingLogger.log(message, 'SignalingServer')
   })
 }
 
