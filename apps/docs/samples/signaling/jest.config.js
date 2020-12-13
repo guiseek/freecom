@@ -1,6 +1,7 @@
 module.exports = {
   displayName: 'docs-samples-signaling',
   preset: '../../../../jest.preset.js',
+  testEnvironment: 'node',
   globals: {
     'ts-jest': {
       tsConfig: '<rootDir>/tsconfig.spec.json',
