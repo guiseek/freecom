@@ -7,7 +7,7 @@ export const environment = {
       ]
     },
     socket: {
-      uri: 'https://gateway.guiseek.dev'
+      uri: 'http://localhost:3000'
     }
   }
 }

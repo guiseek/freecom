@@ -10,6 +10,8 @@ nx generate @nrwl/angular:application --name=peer-client --style=scss --director
 nx generate @nrwl/nest:application --name=signaling --directory=docs/samples --frontendProject=docs-samples-peer-client --tags=side:server,type:app --no-interactive
 
 nx generate @nrwl/nest:library --name=signaling --buildable --importPath=@freecom/signaling --publishable --tags=side:server,type:feature --target=es2019 --no-interactive
+
+nx generate @nrwl/angular:library --name=player --style=scss --directory=peer --buildable --importPath=@freecom/peer-player --linter=eslint --prefix=peer --publishable --tags=side:client,type:feature,scope:peer --no-interactive
 ```
 
 This project was generated using [Nx](https://nx.dev).

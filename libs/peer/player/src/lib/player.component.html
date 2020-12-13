@@ -1,0 +1,61 @@
+<div
+  #player
+  class="videoplayer"
+  [ngClass]="getOverlayClass('show-mouse', 'hide-mouse')"
+>
+  <div
+    class="header"
+    *ngIf="title"
+    [ngClass]="getOverlayClass('visible', 'hidden')"
+  >
+    {{ title }}
+  </div>
+
+  <video
+    #video
+    class="video"
+    [attr.src]="src ? src : null"
+    [srcObject]="srcObject ? srcObject : null"
+    [attr.autoplay]="autoplay ? true : null"
+    [preload]="preload ? 'auto' : 'metadata'"
+    [attr.poster]="poster ? poster : null"
+  >
+    <ng-content select="source"></ng-content>
+    <ng-content select="track"></ng-content>
+    This browser does not support HTML5 video.
+  </video>
+
+  <div
+    class="controls"
+    *ngIf="videoLoaded"
+    [ngClass]="getOverlayClass('visible', 'hidden')"
+  >
+    <div class="menu">
+      <peer-play
+        *ngIf="stream === false"
+        [video]="video"
+        [keyboard]="keyboard"
+        (playChanged)="playing = $event"
+      >
+      </peer-play>
+
+      <peer-volume
+        [muted]="muted"
+        [color]="color"
+        [video]="video"
+        (mutedChanged)="muted = $event; mutedChange.emit(muted)"
+        [keyboard]="keyboard"
+      >
+      </peer-volume>
+
+      <peer-quality *ngIf="quality" [video]="video"></peer-quality>
+
+      <peer-fullscreen
+        *ngIf="fullscreen"
+        [player]="player"
+        [keyboard]="keyboard"
+        (fullscreenChanged)="isFullscreen = $event"
+      ></peer-fullscreen>
+    </div>
+  </div>
+</div>

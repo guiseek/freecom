@@ -18,7 +18,8 @@
     "paths": {
       "@freecom/peer-core": ["libs/peer/core/src/index.ts"],
       "@freecom/peer-client": ["libs/peer/client/src/index.ts"],
-      "@freecom/signaling": ["libs/signaling/src/index.ts"]
+      "@freecom/signaling": ["libs/signaling/src/index.ts"],
+      "@freecom/peer-player": ["libs/peer/player/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
