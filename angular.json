@@ -62,7 +62,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "sample-app:build"
+            "browserTarget": "sample-app:build",
+            "proxyConfig": "apps/sample-app/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -113,6 +114,49 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/sample-app-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "signaling-server": {
+      "root": "apps/signaling-server",
+      "sourceRoot": "apps/signaling-server/src",
+      "projectType": "application",
+      "prefix": "signaling-server",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "options": {
+            "outputPath": "dist/apps/signaling-server",
+            "main": "apps/signaling-server/src/main.ts",
+            "tsConfig": "apps/signaling-server/tsconfig.app.json"
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "signaling-server:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/signaling-server/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/signaling-server/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

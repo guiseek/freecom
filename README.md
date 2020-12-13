@@ -1,5 +1,14 @@
 # Freecom
 
+```sh
+npx create-nx-workspace@10.4.4 freecom --preset angular
+nx add @nrwl/nest
+nx generate @nrwl/nest:application --name=signaling-server --frontendProject=sample-app --tags=side:server,type:app --no-interactive
+npm i --save @nestjs/websockets @nestjs/platform-socket.io
+npm i --save-dev @types/socket.io
+
+```
+
 This project was generated using [Nx](https://nx.dev).
 
 <p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>

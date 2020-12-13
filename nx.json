@@ -29,6 +29,9 @@
     "sample-app-e2e": {
       "tags": [],
       "implicitDependencies": ["sample-app"]
+    },
+    "signaling-server": {
+      "tags": ["side:server", "type:app"]
     }
   }
 }
