@@ -1,4 +1,7 @@
 # Freecom
+```sh
+nx generate @nrwl/workspace:library --name=core --directory=peer --importPath=@freecom/peer-core
+```
 
 This project was generated using [Nx](https://nx.dev).
 

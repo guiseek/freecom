@@ -38,6 +38,7 @@
     "@angular/platform-browser-dynamic": "^10.1.0",
     "@angular/router": "^10.1.0",
     "@nrwl/angular": "10.4.4",
+    "immutable": "^4.0.0-rc.12",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "^0.10.2"
