@@ -42,6 +42,12 @@
     "docs/samples-peer-client-e2e": {
       "tags": [],
       "implicitDependencies": ["docs-samples-peer-client"]
+    },
+    "docs-samples-signaling": {
+      "tags": ["side:server", "type:app"]
+    },
+    "signaling": {
+      "tags": ["side:server", "type:feature"]
     }
   }
 }
