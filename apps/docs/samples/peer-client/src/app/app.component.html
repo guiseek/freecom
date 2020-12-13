@@ -1,0 +1,20 @@
+<main>
+  <section id="grid" *ngIf="(clients$ | async)?.length; else startTmpl">
+    <ng-container *ngFor="let client of clients$ | async">
+      <figure>
+        <video
+          title="@SeekPeer"
+          [autoplay]="true"
+          [srcObject]="client?.stream"
+        ></video>
+      </figure>
+    </ng-container>
+  </section>
+  <ng-template #startTmpl>
+    <div class="start">
+      <button class="join-room" (click)="connectToRoom()">
+        <img src="assets/images/screen.svg" alt="Iniciar chamada de vídeo" />
+      </button>
+    </div>
+  </ng-template>
+</main>

@@ -32,6 +32,16 @@
     },
     "peer-core": {
       "tags": []
+    },
+    "peer-client": {
+      "tags": ["side:client", "type:feature"]
+    },
+    "docs-samples-peer-client": {
+      "tags": ["side:client", "type:app"]
+    },
+    "docs/samples-peer-client-e2e": {
+      "tags": [],
+      "implicitDependencies": ["docs-samples-peer-client"]
     }
   }
 }

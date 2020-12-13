@@ -1,11 +1,11 @@
 const removeWildcardScope = (commit) => {
   if (commit.scope === '*') {
-    commit.scope = '';
+    commit.scope = ''
   }
-};
+}
 
 const isCommitNotAffectingScope = (commit, projectScope) =>
-  commit.scope && commit.scope !== projectScope;
+  commit.scope && commit.scope !== projectScope
 
 const mapToTitleGroup = (commit) => {
   const commitTypeMapping = {
@@ -21,55 +21,55 @@ const mapToTitleGroup = (commit) => {
     ci: 'Continuous Integration',
     chore: 'Chores',
     default: 'Miscellaneous',
-  };
-  commit.type = commitTypeMapping[commit.type] || commitTypeMapping['default'];
-};
+  }
+  commit.type = commitTypeMapping[commit.type] || commitTypeMapping['default']
+}
 
 const checkForBreakingNote = (commit) => {
   commit.notes.forEach((note) => {
     if (note.title.toLowerCase().includes('breaking')) {
-      note.title = `BREAKING CHANGES`;
+      note.title = `BREAKING CHANGES`
     }
-  });
-};
+  })
+}
 
 const addShortHash = (commit) => {
   if (typeof commit.hash === `string`) {
-    commit.shortHash = commit.hash.substring(0, 7);
+    commit.shortHash = commit.hash.substring(0, 7)
   }
-};
+}
 
 const addIssueLinksInSubject = (commit, context) => {
   if (typeof commit.subject !== `string`) {
-    return;
+    return
   }
 
   const repoUrl = context.repository
     ? `${context.host}/${context.owner}/${context.repository}`
-    : context.repoUrl;
+    : context.repoUrl
 
   if (!repoUrl) {
-    return;
+    return
   }
 
-  const linkedIssues = [];
+  const linkedIssues = []
   commit.subject = commit.subject.replace(/#([0-9]+)/g, (_, issue) => {
-    linkedIssues.push(issue);
-    return `[#${issue}](${repoUrl}/issues/${issue})`;
-  });
+    linkedIssues.push(issue)
+    return `[#${issue}](${repoUrl}/issues/${issue})`
+  })
 
   commit.references = commit.references.filter(
     (reference) => !linkedIssues.includes(reference.issue)
-  );
-};
+  )
+}
 
 const addUserLinksInSubject = (commit, context) => {
   if (typeof commit.subject !== `string`) {
-    return;
+    return
   }
 
   if (!context.host) {
-    return;
+    return
   }
 
   commit.subject = commit.subject.replace(
@@ -77,30 +77,30 @@ const addUserLinksInSubject = (commit, context) => {
     (_, username) => {
       return username.includes('/')
         ? `@${username}`
-        : `[@${username}](${context.host}/${username})`;
+        : `[@${username}](${context.host}/${username})`
     }
-  );
-};
+  )
+}
 
 function createCommitTransformerWithScopeFilter(projectScope) {
   return (commit, context) => {
-    removeWildcardScope(commit);
+    removeWildcardScope(commit)
 
     if (isCommitNotAffectingScope(commit, projectScope)) {
-      return;
+      return
     }
 
-    mapToTitleGroup(commit);
-    checkForBreakingNote(commit);
-    addShortHash(commit);
+    mapToTitleGroup(commit)
+    checkForBreakingNote(commit)
+    addShortHash(commit)
 
-    addIssueLinksInSubject(commit, context);
-    addUserLinksInSubject(commit, context);
+    addIssueLinksInSubject(commit, context)
+    addUserLinksInSubject(commit, context)
 
-    return commit;
-  };
+    return commit
+  }
 }
 
 module.exports = {
   createCommitTransformerWithScopeFilter,
-};
+}

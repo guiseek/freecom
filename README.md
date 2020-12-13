@@ -1,6 +1,11 @@
 # Freecom
+
 ```sh
 nx generate @nrwl/workspace:library --name=core --directory=peer --importPath=@freecom/peer-core
+
+nx generate @nrwl/angular:library --name=client --style=scss --directory=peer --buildable --importPath=@freecom/peer-client --linter=eslint --prefix=peer --publishable --tags=side:client,type:feature --no-interactive
+
+nx generate @nrwl/angular:application --name=peer-client --style=scss --directory=docs/samples --linter=eslint --prefix=sample --routing --tags=side:client,type:app --no-interactive
 ```
 
 This project was generated using [Nx](https://nx.dev).

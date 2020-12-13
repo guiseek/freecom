@@ -1,13 +1,13 @@
 const {
   createCommitTransformerWithScopeFilter,
-} = require('./commit-transformer');
-const { createReleaseRulesWithScopeFilter } = require('./release-rules');
+} = require('./commit-transformer')
+const { createReleaseRulesWithScopeFilter } = require('./release-rules')
 
 const buildReversePath = (path) =>
   path
     .split('/')
     .map(() => '..')
-    .join('/');
+    .join('/')
 
 const toolsScript = (script, ...args) =>
   [
@@ -15,26 +15,26 @@ const toolsScript = (script, ...args) =>
     '--project tools/tsconfig.tools.json',
     `tools/${script}`,
     ...args,
-  ].join(' ');
+  ].join(' ')
 
-const formatFile = (file) => `nx format:write --files ${file}`;
-const copyFile = (file, dest) => `cp ${file} ${dest}`;
+const formatFile = (file) => `nx format:write --files ${file}`
+const copyFile = (file, dest) => `cp ${file} ${dest}`
 const insertVersions = (packageRoot) =>
-  toolsScript('releases/insert-versions.ts', packageRoot);
+  toolsScript('releases/insert-versions.ts', packageRoot)
 
 function createReleaseConfigWithScopeFilter({
   projectScope,
   projectRoot,
   buildOutput,
 }) {
-  projectRoot = projectRoot || `libs/${projectScope}`;
-  buildOutput = buildOutput || `dist/libs/${projectScope}`;
+  projectRoot = projectRoot || `libs/${projectScope}`
+  buildOutput = buildOutput || `dist/libs/${projectScope}`
 
-  const relativeWorkspaceRoot = buildReversePath(projectRoot);
-  const relativeBuildOutput = `${relativeWorkspaceRoot}/${buildOutput}`;
+  const relativeWorkspaceRoot = buildReversePath(projectRoot)
+  const relativeBuildOutput = `${relativeWorkspaceRoot}/${buildOutput}`
 
-  const changelogFile = 'CHANGELOG.md';
-  const releaseCommit = `chore(${projectScope}): release \${nextRelease.version}\n\n\${nextRelease.notes}\n\n***\n[skip ci]`;
+  const changelogFile = 'CHANGELOG.md'
+  const releaseCommit = `chore(${projectScope}): release \${nextRelease.version}\n\n\${nextRelease.notes}\n\n***\n[skip ci]`
   return {
     plugins: [
       [
@@ -82,9 +82,9 @@ function createReleaseConfigWithScopeFilter({
       { name: 'beta', prerelease: true },
       { name: 'alpha', prerelease: true },
     ],
-  };
+  }
 }
 
 module.exports = {
   createReleaseConfigWithScopeFilter,
-};
+}

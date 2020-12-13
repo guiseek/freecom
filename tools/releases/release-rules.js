@@ -22,7 +22,7 @@ const releaseRuleWithScopeFilter = ({ type, release }, projectScope) => [
     type,
     release,
   },
-];
+]
 
 const releaseByTypeWithScopeFilter = (release, types, projectScope) =>
   types.reduce(
@@ -31,21 +31,21 @@ const releaseByTypeWithScopeFilter = (release, types, projectScope) =>
       ...releaseRuleWithScopeFilter({ type, release }, projectScope),
     ],
     []
-  );
+  )
 
 const releaseTypes = {
   minor: ['feat'],
   patch: ['build', 'docs', 'fix', 'perf', 'refactor'],
   none: ['chore', 'ci', 'revert', 'test', 'wip'],
-};
+}
 
 function createReleaseRulesWithScopeFilter(projectScope) {
   return [
     ...releaseByTypeWithScopeFilter('minor', releaseTypes.minor, projectScope),
     ...releaseByTypeWithScopeFilter('patch', releaseTypes.patch, projectScope),
-  ];
+  ]
 }
 
 module.exports = {
   createReleaseRulesWithScopeFilter,
-};
+}

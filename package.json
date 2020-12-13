@@ -40,6 +40,7 @@
     "@nrwl/angular": "10.4.4",
     "immutable": "^4.0.0-rc.12",
     "rxjs": "~6.5.5",
+    "socket.io-client": "^2.3.1",
     "tslib": "^2.0.0",
     "zone.js": "^0.10.2"
   },
@@ -56,6 +57,7 @@
     "@nrwl/workspace": "10.4.4",
     "@types/jest": "26.0.8",
     "@types/node": "~8.9.4",
+    "@types/socket.io-client": "^1.4.34",
     "@typescript-eslint/eslint-plugin": "4.3.0",
     "@typescript-eslint/parser": "4.3.0",
     "codelyzer": "^6.0.1",
@@ -66,6 +68,7 @@
     "eslint-plugin-cypress": "^2.10.3",
     "jest": "26.2.2",
     "jest-preset-angular": "8.3.1",
+    "ng-packagr": "^10.1.0",
     "prettier": "2.1.2",
     "ts-jest": "26.4.0",
     "ts-node": "~7.0.0",
