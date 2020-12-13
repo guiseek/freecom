@@ -39,7 +39,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -143,7 +142,7 @@
             "tsConfig": "libs/peer/core/tsconfig.lib.json",
             "packageJson": "libs/peer/core/package.json",
             "main": "libs/peer/core/src/index.ts",
-            "assets": ["libs/peer/core/*.md"]
+            "assets": ["libs/peer/core/*.md", "libs/peer/core/LICENSE"]
           }
         }
       }
@@ -225,7 +224,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -382,7 +380,7 @@
             "tsConfig": "libs/signaling/tsconfig.lib.json",
             "packageJson": "libs/signaling/package.json",
             "main": "libs/signaling/src/index.ts",
-            "assets": ["libs/signaling/*.md"]
+            "assets": ["libs/signaling/*.md", "libs/signaling/LICENSE"]
           }
         }
       }
@@ -411,5 +409,5 @@
       "unitTestRunner": "jest"
     }
   },
-  "defaultProject": "sample-app"
+  "defaultProject": "signaling"
 }
