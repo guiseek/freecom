@@ -41,6 +41,9 @@
     },
     "signaling": {
       "tags": ["side:server", "type:feature"]
+    },
+    "peer-player": {
+      "tags": ["side:client", "type:feature", "scope:peer"]
     }
   }
 }
