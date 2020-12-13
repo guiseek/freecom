@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@freecom/peer-core": ["libs/peer/core/src/index.ts"]
+      "@freecom/peer-core": ["libs/peer/core/src/index.ts"],
+      "@freecom/peer-client": ["libs/peer/client/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
