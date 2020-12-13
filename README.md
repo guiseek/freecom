@@ -1,16 +1,71 @@
 # Freecom
 
+### Clone
+`git clone https://github.com/guiseek/freecom.git`
+
+### Open
+`code freecom/freecom.code-workspace`
+
+### Install
+`npm install`
+
+### Run
+`npm start`
+
+
+### Structure
+
 ```sh
+# Samples
+apps
+└── docs
+    └── samples
+        ├── peer-client
+        ├── peer-client-e2e
+        └── signaling
+```
+
+```sh
+# Libraries
+libs
+├── peer
+│   ├── client # Client side
+│   ├── Core   # Common 
+│   └── player # Client side
+└── signaling  # Server side
+```
+
+### Stack
+
+|   |   |   |   |   | 
+| - | - | - | - | - |
+![Angular](apps/docs/samples/peer-client/src/assets/images/logos/angular.svg) | ![NestJS](apps/docs/samples/peer-client/src/assets/images/logos/nest.svg) | ![TypeScript](apps/docs/samples/peer-client/src/assets/images/logos/ts.svg) | ![JavaScript](apps/docs/samples/peer-client/src/assets/images/logos/js.svg) | ![HTML5](apps/docs/samples/peer-client/src/assets/images/logos/html.svg) | 
+
+---
+## Flow
+![Flow](apps/docs/samples/peer-client/src/assets/images/diagrams/flow.svg)
+
+---
+
+
+## Playbook apps & libs
+```sh
+# Core
 nx generate @nrwl/workspace:library --name=core --directory=peer --importPath=@freecom/peer-core
 
+# PeerClient
 nx generate @nrwl/angular:library --name=client --style=scss --directory=peer --buildable --importPath=@freecom/peer-client --linter=eslint --prefix=peer --publishable --tags=side:client,type:feature --no-interactive
 
+# PeerClient, docs & samples
 nx generate @nrwl/angular:application --name=peer-client --style=scss --directory=docs/samples --linter=eslint --prefix=sample --routing --tags=side:client,type:app --no-interactive
 
-nx generate @nrwl/nest:application --name=signaling --directory=docs/samples --frontendProject=docs-samples-peer-client --tags=side:server,type:app --no-interactive
-
+# Signaling
 nx generate @nrwl/nest:library --name=signaling --buildable --importPath=@freecom/signaling --publishable --tags=side:server,type:feature --target=es2019 --no-interactive
 
+# Signaling, docs & samples
+nx generate @nrwl/nest:application --name=signaling --directory=docs/samples --frontendProject=docs-samples-peer-client --tags=side:server,type:app --no-interactive
+
+# Player
 nx generate @nrwl/angular:library --name=player --style=scss --directory=peer --buildable --importPath=@freecom/peer-player --linter=eslint --prefix=peer --publishable --tags=side:client,type:feature,scope:peer --no-interactive
 ```
 
