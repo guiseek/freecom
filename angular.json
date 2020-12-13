@@ -25,7 +25,9 @@
               "apps/sample-app/src/favicon.ico",
               "apps/sample-app/src/assets"
             ],
-            "styles": ["apps/sample-app/src/styles.scss"],
+            "styles": [
+              "apps/sample-app/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -79,7 +81,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/sample-app/src/**/*.ts"]
+            "lintFilePatterns": [
+              "apps/sample-app/src/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -112,7 +116,44 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/sample-app-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/sample-app-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
+    "peer-core": {
+      "root": "libs/peer/core",
+      "sourceRoot": "libs/peer/core/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/peer/core/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/peer/core/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "builder": "@nrwl/node:package",
+          "options": {
+            "outputPath": "dist/libs/peer/core",
+            "tsConfig": "libs/peer/core/tsconfig.lib.json",
+            "packageJson": "libs/peer/core/package.json",
+            "main": "libs/peer/core/src/index.ts",
+            "assets": [
+              "libs/peer/core/*.md"
+            ]
           }
         }
       }
