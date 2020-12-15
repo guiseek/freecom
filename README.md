@@ -47,9 +47,13 @@ libs
 ---
 
 ## Flow
-
+*Thanks  [@O Geovani](https://github.com/geovanisouza92)*
+### Light
 ![Flow](apps/docs/samples/peer-client/src/assets/images/diagrams/flow.svg)
 
+
+### Dark
+![Flow](apps/docs/samples/peer-client/src/assets/images/diagrams/flow-dark.svg)
 ---
 
 ## Playbook apps & libs
