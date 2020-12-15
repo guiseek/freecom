@@ -44,6 +44,9 @@
     },
     "peer-player": {
       "tags": ["side:client", "type:feature", "scope:peer"]
+    },
+    "api-gateway": {
+      "tags": ["side:server", "type:app", "scope:api"]
     }
   }
 }
