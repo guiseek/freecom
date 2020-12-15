@@ -307,6 +307,56 @@
           "style": "scss"
         }
       }
+    },
+    "api-gateway": {
+      "root": "apps/api/gateway",
+      "sourceRoot": "apps/api/gateway/src",
+      "projectType": "application",
+      "prefix": "api-gateway",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "options": {
+            "outputPath": "dist/apps/api/gateway",
+            "main": "apps/api/gateway/src/main.ts",
+            "tsConfig": "apps/api/gateway/tsconfig.app.json",
+            "assets": ["apps/api/gateway/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api/gateway/src/envs/env.ts",
+                  "with": "apps/api/gateway/src/envs/env.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-gateway:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api/gateway/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/api/gateway/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

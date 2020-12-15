@@ -6,5 +6,6 @@ module.exports = {
     '<rootDir>/apps/docs/samples/signaling',
     '<rootDir>/libs/signaling',
     '<rootDir>/libs/peer/player',
+    '<rootDir>/apps/api/gateway',
   ],
 }

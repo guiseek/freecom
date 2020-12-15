@@ -1,17 +1,20 @@
 # Freecom
 
 ### Clone
+
 `git clone https://github.com/guiseek/freecom.git`
 
 ### Open
+
 `code freecom/freecom.code-workspace`
 
 ### Install
+
 `npm install`
 
 ### Run
-`npm start`
 
+`npm start`
 
 ### Structure
 
@@ -30,25 +33,27 @@ apps
 libs
 ├── peer
 │   ├── client # Client side
-│   ├── Core   # Common 
+│   ├── Core   # Common
 │   └── player # Client side
 └── signaling  # Server side
 ```
 
 ### Stack
 
-|   |   |   |   |   | 
-| - | - | - | - | - |
-![Angular](apps/docs/samples/peer-client/src/assets/images/logos/angular.svg) | ![NestJS](apps/docs/samples/peer-client/src/assets/images/logos/nest.svg) | ![TypeScript](apps/docs/samples/peer-client/src/assets/images/logos/ts.svg) | ![JavaScript](apps/docs/samples/peer-client/src/assets/images/logos/js.svg) | ![HTML5](apps/docs/samples/peer-client/src/assets/images/logos/html.svg) | 
+|                                                                               |                                                                           |                                                                             |                                                                             |                                                                          |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| ![Angular](apps/docs/samples/peer-client/src/assets/images/logos/angular.svg) | ![NestJS](apps/docs/samples/peer-client/src/assets/images/logos/nest.svg) | ![TypeScript](apps/docs/samples/peer-client/src/assets/images/logos/ts.svg) | ![JavaScript](apps/docs/samples/peer-client/src/assets/images/logos/js.svg) | ![HTML5](apps/docs/samples/peer-client/src/assets/images/logos/html.svg) |
 
 ---
+
 ## Flow
+
 ![Flow](apps/docs/samples/peer-client/src/assets/images/diagrams/flow.svg)
 
 ---
 
-
 ## Playbook apps & libs
+
 ```sh
 # Core
 nx generate @nrwl/workspace:library --name=core --directory=peer --importPath=@freecom/peer-core
@@ -67,6 +72,24 @@ nx generate @nrwl/nest:application --name=signaling --directory=docs/samples --f
 
 # Player
 nx generate @nrwl/angular:library --name=player --style=scss --directory=peer --buildable --importPath=@freecom/peer-player --linter=eslint --prefix=peer --publishable --tags=side:client,type:feature,scope:peer --no-interactive
+
+# API Gateway
+nx generate @nrwl/nest:application --name=gateway --directory=api --tags=side:server,type:app,scope:api --no-interactive
+
+## Api Gateway User
+nx generate @nestjs/schematics:resource --name=users --sourceRoot=apps/api/gateway/src --type=ws --no-interactive
+
+### Class validator & class transformer
+npm i --save class-validator class-transformer
+
+### NestJS Config
+npm i --save @nestjs/config
+
+### NestJS Mapped types
+npm i --save @nestjs/mapped-types
+
+### Mongoose
+npm install --save @nestjs/mongoose mongoose
 ```
 
 This project was generated using [Nx](https://nx.dev).
