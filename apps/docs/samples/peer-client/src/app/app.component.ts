@@ -1,4 +1,5 @@
 import { ClientConnection, ClientStore } from '@freecom/peer-client'
+import { UserAuthService } from '@freecom/user-auth'
 import { catchError, map } from 'rxjs/operators'
 import { Component } from '@angular/core'
 import { throwError } from 'rxjs'
@@ -19,6 +20,7 @@ export class AppComponent {
   )
 
   constructor(
+    private userAuthService: UserAuthService,
     private clientStoreService: ClientStore,
     private connectionService: ClientConnection
   ) {}
@@ -31,6 +33,9 @@ export class AppComponent {
     this.connectionService.connectScreen()
   }
 
+  signUp() {
+    this.userAuthService.open('up').subscribe(console.log)
+  }
   hangUp() {
     this.connectionService.hangup()
   }

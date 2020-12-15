@@ -6,5 +6,7 @@ module.exports = {
     '<rootDir>/apps/docs/samples/signaling',
     '<rootDir>/libs/signaling',
     '<rootDir>/libs/peer/player',
+    '<rootDir>/libs/user/domain',
+    '<rootDir>/libs/user/feature-auth',
   ],
 }

@@ -44,6 +44,12 @@
     },
     "peer-player": {
       "tags": ["side:client", "type:feature", "scope:peer"]
+    },
+    "user-domain": {
+      "tags": ["domain:user", "type:domain-logic"]
+    },
+    "user-auth": {
+      "tags": ["domain:user", "type:feature"]
     }
   }
 }

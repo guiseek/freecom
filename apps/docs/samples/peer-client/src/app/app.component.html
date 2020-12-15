@@ -17,10 +17,20 @@
   </button>
   <ng-template #startTmpl>
     <div class="start">
-      <button class="join-room" (click)="connectToRoom()">
-        <img src="assets/images/beta.svg" alt="Iniciar chamada de vídeo" />
-      </button>
-      <h2>Chamada de vídeo...</h2>
+      <div id="grid">
+        <div>
+          <button (click)="connectToRoom()">
+            <img src="assets/images/beta.svg" alt="Iniciar chamada de vídeo" />
+          </button>
+          <h2>Chamada de vídeo...</h2>
+        </div>
+        <div>
+          <button (click)="signUp()">
+            <img src="assets/images/box.svg" alt="Criar seu usuário" />
+          </button>
+          <h2>Criar seu usuário.</h2>
+        </div>
+      </div>
     </div>
   </ng-template>
 </main>

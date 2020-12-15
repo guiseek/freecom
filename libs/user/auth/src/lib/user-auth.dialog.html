@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-tab-group dynamicHeight>
+    <mat-tab label="IN">
+      <ng-template matTabContent>
+        <user-sign-in
+          [auth]="data?.user"
+          (updated)="onIn($event)"
+          (loaded)="onLoadForm($event)"
+        ></user-sign-in>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="UP">
+      <ng-template matTabContent>
+        <user-sign-up
+          [user]="data?.user"
+          (updated)="onUp($event)"
+          (loaded)="onLoadForm($event)"
+        ></user-sign-up>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+
+  <pre>{{ form?.value | json }}</pre>
+
+  <mat-card-actions>
+    <button type="button" mat-button (click)="onChange($event)">Fechar</button>
+    <button form="form" type="submit" mat-button (click)="onChange($event)">
+      Enviar
+    </button>
+  </mat-card-actions>
+</mat-card>

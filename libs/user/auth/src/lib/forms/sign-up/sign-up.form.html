@@ -1,0 +1,29 @@
+<form name="form" [formGroup]="form">
+  <mat-form-field>
+    <input type="text" matInput formControlName="uuid" readonly />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Nome</mat-label>
+    <input type="text" matInput autofocus formControlName="name" />
+    <mat-error>Obrigatório</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Usuário</mat-label>
+    <input type="text" matInput formControlName="user" />
+    <mat-error>Obrigatório</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Senha</mat-label>
+    <input type="password" matInput formControlName="pass" />
+    <mat-error>Mínimo de 6 caracteres</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input type="email" matInput formControlName="email" />
+    <mat-error>Endereço de e-mail inválido</mat-error>
+  </mat-form-field>
+</form>

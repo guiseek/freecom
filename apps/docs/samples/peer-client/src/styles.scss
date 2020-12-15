@@ -13,18 +13,51 @@ $docs-samples-peer-client-warn: mat-palette($mat-red);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$docs-samples-peer-client-theme: mat-light-theme((
-  color: (
-    primary: $docs-samples-peer-client-primary,
-    accent: $docs-samples-peer-client-accent,
-    warn: $docs-samples-peer-client-warn,
+$docs-samples-peer-client-theme: mat-light-theme(
+  (
+    color: (
+      primary: $docs-samples-peer-client-primary,
+      accent: $docs-samples-peer-client-accent,
+      warn: $docs-samples-peer-client-warn,
+    ),
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include custom-material-theme($docs-samples-peer-client-theme);
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.user-auth-dialog .mat-dialog-container {
+  background: transparent;
+  padding: 0;
+
+  .mat-card {
+    padding: 0;
+
+    .mat-tab-body-wrapper {
+      padding: 12px;
+    }
+
+    .mat-card-actions {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding: 12px;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+}
