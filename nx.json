@@ -10,7 +10,6 @@
       "devDependencies": "*"
     },
     "tsconfig.base.json": "*",
-    "tslint.json": "*",
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
@@ -53,6 +52,12 @@
     },
     "media-core": {
       "tags": []
+    },
+    "peer-phone": {
+      "tags": ["side:client", "type:feat", "scope:peer"]
+    },
+    "core-entities": {
+      "tags": ["type:util", "scope:core"]
     }
   }
 }

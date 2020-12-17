@@ -95,6 +95,12 @@ nx generate @nrwl/angular:library --name=player --style=scss --directory=peer --
 
 ```
 
+### Peer Phone
+
+```sh
+nx generate @nrwl/angular:library --name=phone --style=scss --directory=peer --buildable --importPath=@freecom/peer-phone --prefix=peer --publishable --tags=side:client,type:feat,scope:peer --no-interactive --dry-run
+```
+
 # PeerClient, docs & samples
 
 ```
@@ -160,4 +166,11 @@ npm install --save @nestjs/mongoose mongoose
 
 ```
 nx generate @nrwl/angular:library --name=audio --style=scss --directory=media --buildable --importPath=@freecom/media-audio --prefix=media --publishable --tags=side:client,type:feature,scope:media --no-interactive
+```
+
+# Core
+
+## Core entities
+```sh
+nx generate @nrwl/workspace:library --name=entities --directory=core --importPath=@freecom/core-entities --tags=type:util,scope:core --no-interactive
 ```

@@ -10,7 +10,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/peer/core/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/peer/core/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -27,7 +29,10 @@
             "tsConfig": "libs/peer/core/tsconfig.lib.json",
             "packageJson": "libs/peer/core/package.json",
             "main": "libs/peer/core/src/index.ts",
-            "assets": ["libs/peer/core/*.md", "libs/peer/core/LICENSE"]
+            "assets": [
+              "libs/peer/core/*.md",
+              "libs/peer/core/LICENSE"
+            ]
           }
         }
       }
@@ -53,7 +58,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/peer/client/src/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/peer/client/src/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -89,13 +96,17 @@
             "main": "apps/docs/samples/peer-client/src/main.ts",
             "polyfills": "apps/docs/samples/peer-client/src/polyfills.ts",
             "tsConfig": "apps/docs/samples/peer-client/tsconfig.app.json",
-            "allowedCommonJsDependencies": ["socket.io-client"],
+            "allowedCommonJsDependencies": [
+              "socket.io-client"
+            ],
             "aot": true,
             "assets": [
               "apps/docs/samples/peer-client/src/favicon.ico",
               "apps/docs/samples/peer-client/src/assets"
             ],
-            "styles": ["apps/docs/samples/peer-client/src/styles.scss"],
+            "styles": [
+              "apps/docs/samples/peer-client/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -149,7 +160,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/docs/samples/peer-client/src/**/*.ts"]
+            "lintFilePatterns": [
+              "apps/docs/samples/peer-client/src/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -202,7 +215,9 @@
             "outputPath": "dist/apps/docs/samples/signaling",
             "main": "apps/docs/samples/signaling/src/main.ts",
             "tsConfig": "apps/docs/samples/signaling/tsconfig.app.json",
-            "assets": ["apps/docs/samples/signaling/src/assets"]
+            "assets": [
+              "apps/docs/samples/signaling/src/assets"
+            ]
           },
           "configurations": {
             "production": {
@@ -227,7 +242,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/docs/samples/signaling/**/*.ts"]
+            "lintFilePatterns": [
+              "apps/docs/samples/signaling/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -248,7 +265,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/signaling/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/signaling/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -265,7 +284,10 @@
             "tsConfig": "libs/signaling/tsconfig.lib.json",
             "packageJson": "libs/signaling/package.json",
             "main": "libs/signaling/src/index.ts",
-            "assets": ["libs/signaling/*.md", "libs/signaling/LICENSE"]
+            "assets": [
+              "libs/signaling/*.md",
+              "libs/signaling/LICENSE"
+            ]
           }
         }
       }
@@ -291,7 +313,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/peer/player/src/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/peer/player/src/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -321,7 +345,9 @@
             "outputPath": "dist/apps/api/gateway",
             "main": "apps/api/gateway/src/main.ts",
             "tsConfig": "apps/api/gateway/tsconfig.app.json",
-            "assets": ["apps/api/gateway/src/assets"]
+            "assets": [
+              "apps/api/gateway/src/assets"
+            ]
           },
           "configurations": {
             "production": {
@@ -346,7 +372,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/api/gateway/**/*.ts"]
+            "lintFilePatterns": [
+              "apps/api/gateway/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -379,7 +407,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/media/audio/src/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/media/audio/src/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -405,7 +435,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/media/core/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/media/core/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -422,7 +454,84 @@
             "tsConfig": "libs/media/core/tsconfig.lib.json",
             "packageJson": "libs/media/core/package.json",
             "main": "libs/media/core/src/index.ts",
-            "assets": ["libs/media/core/*.md"]
+            "assets": [
+              "libs/media/core/*.md"
+            ]
+          }
+        }
+      }
+    },
+    "peer-phone": {
+      "projectType": "library",
+      "root": "libs/peer/phone",
+      "sourceRoot": "libs/peer/phone/src",
+      "prefix": "peer",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/peer/phone/tsconfig.lib.json",
+            "project": "libs/peer/phone/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/peer/phone/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/peer/phone/src/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/peer/phone/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "core-entities": {
+      "root": "libs/core/entities",
+      "sourceRoot": "libs/core/entities/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/core/entities/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/core/entities/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "builder": "@nrwl/node:package",
+          "options": {
+            "outputPath": "dist/libs/core/entities",
+            "tsConfig": "libs/core/entities/tsconfig.lib.json",
+            "packageJson": "libs/core/entities/package.json",
+            "main": "libs/core/entities/src/index.ts",
+            "assets": [
+              "libs/core/entities/*.md"
+            ]
           }
         }
       }
