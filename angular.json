@@ -382,5 +382,5 @@
       "unitTestRunner": "jest"
     }
   },
-  "defaultProject": "signaling"
+  "defaultProject": "api-gateway"
 }
