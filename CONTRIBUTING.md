@@ -37,11 +37,11 @@ Se você quiser conversar sobre a questão em tempo real, entre em contato por m
 
 ## <a name="issue"></a> Encontrou um Bug?
 
-Se você encontrar um bug no código-fonte, pode nos ajudar [abrindo uma issue](#new-discussion) em nosso [repositório Github][github].
+Se você encontrar um bug no código-fonte, pode nos ajudar [abrindo uma issue](https://github.com/guiseek/freecom/discussions/new) em nosso [repositório Github][github].
 Melhor ainda, você pode [enviar um Pull Request](#submit-pr) com uma correção.
 
 ## <a name="feature"></a> Sente falta de algum recurso?
-Você pode *solicitar* um novo recurso [iniciar uma discussão](#new-discussion) para nosso Repositório GitHub.
+Você pode *solicitar* um novo recurso [iniciar uma discussão](https://github.com/guiseek/freecom/discussions/new) para nosso Repositório GitHub.
 Se você gostaria de *implementar* um novo recurso, considere o tamanho da alteração para determinar as etapas corretas para prosseguir:
 
 * Para um **Novo Recurso**, primeiro inicie uma discussão e esboce sua proposta para que possa ser avaliada.
@@ -51,7 +51,7 @@ Se você gostaria de *implementar* um novo recurso, considere o tamanho da alter
 
 * **Pequenos recursos** podem ser criados e diretamente [enviados como um pull request](#submit-pr).
 
-
+## <a name="submit-pr"></a>
 > # Em desenvolvimento
 > Em breve teremos mais informações sobre como contribuir, legal?
 > 
@@ -65,4 +65,44 @@ Se você gostaria de *implementar* um novo recurso, considere o tamanho da alter
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
 | ![Angular](apps/docs/samples/peer-client/src/assets/images/logos/angular.svg) | ![NestJS](apps/docs/samples/peer-client/src/assets/images/logos/nest.svg) | ![TypeScript](apps/docs/samples/peer-client/src/assets/images/logos/ts.svg) | ![JavaScript](apps/docs/samples/peer-client/src/assets/images/logos/js.svg) | ![HTML5](apps/docs/samples/peer-client/src/assets/images/logos/html.svg) | ![HTML5](docs/assets/images/logos/css.svg) |
 
+---
 
+## Comando usados para geração de features até agora
+
+```sh
+# Core
+nx generate @nrwl/workspace:library --name=core --directory=peer --importPath=@freecom/peer-core
+
+# PeerClient
+nx generate @nrwl/angular:library --name=client --style=scss --directory=peer --buildable --importPath=@freecom/peer-client --linter=eslint --prefix=peer --publishable --tags=side:client,type:feature --no-interactive
+
+# PeerClient, docs & samples
+nx generate @nrwl/angular:application --name=peer-client --style=scss --directory=docs/samples --linter=eslint --prefix=sample --routing --tags=side:client,type:app --no-interactive
+
+# Signaling
+nx generate @nrwl/nest:library --name=signaling --buildable --importPath=@freecom/signaling --publishable --tags=side:server,type:feature --target=es2019 --no-interactive
+
+# Signaling, docs & samples
+nx generate @nrwl/nest:application --name=signaling --directory=docs/samples --frontendProject=docs-samples-peer-client --tags=side:server,type:app --no-interactive
+
+# Player
+nx generate @nrwl/angular:library --name=player --style=scss --directory=peer --buildable --importPath=@freecom/peer-player --linter=eslint --prefix=peer --publishable --tags=side:client,type:feature,scope:peer --no-interactive
+
+# API Gateway
+nx generate @nrwl/nest:application --name=gateway --directory=api --tags=side:server,type:app,scope:api --no-interactive
+
+## Api Gateway User
+nx generate @nestjs/schematics:resource --name=users --sourceRoot=apps/api/gateway/src --type=ws --no-interactive
+
+### Class validator & class transformer
+npm i --save class-validator class-transformer
+
+### NestJS Config
+npm i --save @nestjs/config
+
+### NestJS Mapped types
+npm i --save @nestjs/mapped-types
+
+### Mongoose
+npm install --save @nestjs/mongoose mongoose
+```
