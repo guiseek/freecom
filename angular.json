@@ -357,6 +357,75 @@
           }
         }
       }
+    },
+    "media-audio": {
+      "projectType": "library",
+      "root": "libs/media/audio",
+      "sourceRoot": "libs/media/audio/src",
+      "prefix": "media",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/media/audio/tsconfig.lib.json",
+            "project": "libs/media/audio/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/media/audio/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/media/audio/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/media/audio/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "media-core": {
+      "root": "libs/media/core",
+      "sourceRoot": "libs/media/core/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/media/core/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/media/core/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "builder": "@nrwl/node:package",
+          "options": {
+            "outputPath": "dist/libs/media/core",
+            "tsConfig": "libs/media/core/tsconfig.lib.json",
+            "packageJson": "libs/media/core/package.json",
+            "main": "libs/media/core/src/index.ts",
+            "assets": ["libs/media/core/*.md"]
+          }
+        }
+      }
     }
   },
   "cli": {
