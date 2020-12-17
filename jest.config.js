@@ -7,5 +7,7 @@ module.exports = {
     '<rootDir>/libs/signaling',
     '<rootDir>/libs/peer/player',
     '<rootDir>/apps/api/gateway',
+    '<rootDir>/libs/media/audio',
+    '<rootDir>/libs/media/core',
   ],
 }

@@ -47,6 +47,12 @@
     },
     "api-gateway": {
       "tags": ["side:server", "type:app", "scope:api"]
+    },
+    "media-audio": {
+      "tags": ["side:client", "type:feature", "scope:media"]
+    },
+    "media-core": {
+      "tags": []
     }
   }
 }
