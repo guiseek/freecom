@@ -1,0 +1,89 @@
+:host {
+  display: flex;
+  flex-direction: column;
+
+  width: 380px;
+  height: 321px;
+  max-height: 600px;
+
+  .mat-dialog-actions {
+    justify-content: space-around;
+  }
+
+  svg {
+    flex: 1;
+    width: 100%;
+  }
+
+  .phone {
+    /* RUN ANIMATION IN CENTER */
+    transform-origin: 50% 50%;
+    animation: ring 2s ease infinite;
+  }
+
+  .first-wave-right {
+    transform: translateX(-2px);
+    animation: propagation_right 1.8s ease infinite;
+    opacity: 0;
+  }
+
+  .second-wave-right {
+    transform: translateX(-2px);
+    animation: propagation_right 1.8s 0.2s ease infinite;
+    opacity: 0;
+  }
+
+  .first-wave-left {
+    transform: translateX(2px);
+    animation: propagation_left 1.8s ease infinite;
+    opacity: 0;
+  }
+
+  .second-wave-left {
+    transform: translateX(2px);
+    animation: propagation_left 1.8s 0.2s ease infinite;
+    opacity: 0;
+  }
+
+  @keyframes propagation_right {
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(2px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes propagation_left {
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-2px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    20% {
+      transform: rotate(10deg);
+    }
+    40% {
+      transform: rotate(-10deg);
+    }
+    60% {
+      transform: rotate(10deg);
+    }
+    80% {
+      transform: rotate(0deg);
+    }
+  }
+}
+::ng-deep .phone-container .mat-dialog-container {
+  background-color: transparent;
+  box-shadow: none;
+}

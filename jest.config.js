@@ -9,5 +9,7 @@ module.exports = {
     '<rootDir>/apps/api/gateway',
     '<rootDir>/libs/media/audio',
     '<rootDir>/libs/media/core',
+    '<rootDir>/libs/peer/phone',
+    '<rootDir>/libs/core/entities',
   ],
 }
