@@ -24,8 +24,8 @@ import { AppComponent } from './app.component'
     PeerPlayerModule,
     PeerPhoneModule.forRoot({
       ringtones: {
-        incoming: 'assets/audios/phone-ringtone_time_that_passes.ogg'
-      }
+        incoming: 'assets/audios/phone-ringtone_time_that_passes.ogg',
+      },
     }),
     PeerClientModule.forRoot(environment.connection),
     AppRoutingModule,

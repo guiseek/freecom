@@ -8,7 +8,7 @@ export const environment = {
       ],
     },
     socket: {
-      uri: 'http://localhost:3000',
+      uri: 'https://gateway.freecom.dev',
     },
   },
 }

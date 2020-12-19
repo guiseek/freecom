@@ -8,14 +8,11 @@ import {
   EventEmitter,
   AfterViewInit,
 } from '@angular/core'
-import {
-  EventHandler,
-  IEventHandler
-} from '../utilities/event-handler'
+import { EventHandler, IEventHandler } from '../utilities/event-handler'
 
 @Component({
   selector: 'peer-play',
-  templateUrl: './play.button.html'
+  templateUrl: './play.button.html',
 })
 export class PlayButton implements AfterViewInit, OnDestroy {
   @Input() video: HTMLVideoElement

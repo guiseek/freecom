@@ -2,7 +2,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config'
 import { MongooseModule } from '@nestjs/mongoose'
 import { Module } from '@nestjs/common'
 
-import { SignalingModule } from '@freecom/signaling';
+import { SignalingModule } from '@freecom/signaling'
 import { UsersModule } from './users/users.module'
 
 const mongooseFactory = (configService: ConfigService) => {
@@ -17,7 +17,7 @@ const mongooseFactory = (configService: ConfigService) => {
       inject: [ConfigService],
     }),
     UsersModule,
-    SignalingModule
+    SignalingModule,
   ],
 })
 export class AppModule {}

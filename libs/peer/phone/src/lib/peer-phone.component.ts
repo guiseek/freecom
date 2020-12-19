@@ -4,7 +4,7 @@ import { PEER_PHONE_CONFIG } from './config/config-injectors'
 import { PeerPhoneConfig } from './config/peer-phone-config'
 import { delay, repeatWhen, takeUntil } from 'rxjs/operators'
 import { Subject, interval, fromEvent } from 'rxjs'
-import { User } from '@freecom/core-entities';
+import { User } from '@freecom/core-entities'
 
 @Component({
   selector: 'peer-peer-phone',

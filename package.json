@@ -28,7 +28,9 @@
     "update": "ng update @nrwl/workspace",
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
-    "commit": "git cz",
+    "prerelease": "nx affected:build --all",
+    "release": "nx affected --target release --all",
+    "commit": "git-cz",
     "help": "nx help"
   },
   "private": false,

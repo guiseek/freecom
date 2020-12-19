@@ -6,9 +6,11 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
-
 @mixin custom-material-theme($theme-or-color-config) {
-  @include _mat-check-duplicate-theme-styles($theme-or-color-config, 'custom-material-theme') {
+  @include _mat-check-duplicate-theme-styles(
+    $theme-or-color-config,
+    'custom-material-theme'
+  ) {
     @include mat-core-theme($theme-or-color-config);
     @include mat-badge-theme($theme-or-color-config);
     @include mat-bottom-sheet-theme($theme-or-color-config);
