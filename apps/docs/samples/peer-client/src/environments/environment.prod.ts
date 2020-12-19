@@ -6,11 +6,10 @@ export const environment = {
         // { urls: 'stun:gateway.guiseek.dev:3478' },
         { urls: 'stun:stun.services.mozilla.com' },
         { urls: 'stun:stun.stunprotocol.org:3478' },
-      ]
+      ],
     },
     socket: {
-      uri: 'https://gateway.guiseek.dev'
-    }
-  }
-
+      uri: 'https://gateway.freecom.dev',
+    },
+  },
 }
