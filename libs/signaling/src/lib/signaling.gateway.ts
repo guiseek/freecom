@@ -16,6 +16,8 @@ export class SignalingGateway
 
   sockets = new Map<string, Client>([])
 
+  data = {}
+
   @WebSocketServer()
   server: Server
 
@@ -29,6 +31,20 @@ export class SignalingGateway
   onPeerConnect(socket: Socket, data: any) {
     this.logger.log(`Client ${socket.id} connected to room`)
     socket.broadcast.emit(PeerEvent.Connected, { id: socket.id })
+  }
+
+  @SubscribeMessage(PeerEvent.SdpOffer)
+  offer(client: Socket, payload: Partial<FormData>) {
+    this.data = { ...this.data, ...payload }
+    console.log(`offer: ${JSON.stringify(payload)}.`)
+    client.broadcast.emit(PeerEvent.SdpOffer, payload)
+  }
+
+  @SubscribeMessage(PeerEvent.SdpAnswer)
+  answer(client: Socket, payload: Partial<FormData>) {
+    this.data = { ...this.data, ...payload }
+    console.log(`answer: ${JSON.stringify(payload)}.`)
+    client.broadcast.emit(PeerEvent.SdpAnswer, payload)
   }
 
   handleConnection(socket: Socket, ...args: any[]) {

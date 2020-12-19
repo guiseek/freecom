@@ -28,7 +28,9 @@
     "update": "ng update @nrwl/workspace",
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
-    "commit": "git cz",
+    "prerelease": "nx affected:build --all",
+    "release": "nx affected --target release --all",
+    "commit": "git-cz",
     "help": "nx help"
   },
   "private": false,
@@ -91,6 +93,7 @@
     "@nrwl/workspace": "10.4.4",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/exec": "^5.0.0",
     "@semantic-release/git": "^9.0.0",
     "@semantic-release/github": "^7.2.0",
     "@semantic-release/npm": "^7.0.9",

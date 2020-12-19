@@ -1,3 +1,3 @@
-export * from './event-handler';
-export * from './fullscreen';
-export * from './player-icon';
+export * from './event-handler'
+export * from './fullscreen'
+export * from './player-icon'

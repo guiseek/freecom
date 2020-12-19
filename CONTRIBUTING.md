@@ -171,6 +171,7 @@ nx generate @nrwl/angular:library --name=audio --style=scss --directory=media --
 # Core
 
 ## Core entities
+
 ```sh
 nx generate @nrwl/workspace:library --name=entities --directory=core --importPath=@freecom/core-entities --tags=type:util,scope:core --no-interactive
 ```
