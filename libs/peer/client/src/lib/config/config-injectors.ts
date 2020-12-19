@@ -10,9 +10,7 @@ export interface PeerConfig {
   socket: SocketOptions
 }
 
-export const PEER_CONFIG = new InjectionToken<PeerConfig>(
-  'peer-config'
-)
+export const PEER_CONFIG = new InjectionToken<PeerConfig>('peer-config')
 export const PEER_RTC_CONFIGURATION = new InjectionToken<RTCConfiguration>(
   'peer-rtc-configuration'
 )

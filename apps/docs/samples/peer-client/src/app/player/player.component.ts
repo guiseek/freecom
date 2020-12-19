@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core'
 import { ClientConnection, ClientStore } from '@freecom/peer-client'
 import { catchError, map } from 'rxjs/operators'
 import { throwError } from 'rxjs'
@@ -7,7 +7,7 @@ import { throwError } from 'rxjs'
   selector: 'sample-player',
   templateUrl: './player.component.html',
   styleUrls: ['./player.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PlayerComponent {
   active$ = this.connectionService.active$
@@ -33,5 +33,4 @@ export class PlayerComponent {
   hangUp() {
     this.connectionService.hangup()
   }
-
 }

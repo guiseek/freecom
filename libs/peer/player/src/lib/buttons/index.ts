@@ -1,2 +1,2 @@
-export * from './fullscreen.button';
-export * from './play.button';
+export * from './fullscreen.button'
+export * from './play.button'

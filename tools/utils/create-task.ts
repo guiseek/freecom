@@ -1,5 +1,5 @@
-import { Listr, ListrOptions, ListrTask } from 'listr2';
-import { proxec } from './proxec';
+import { Listr, ListrOptions, ListrTask } from 'listr2'
+import { proxec } from './proxec'
 
 export const createTask = (
   title: string,
@@ -9,8 +9,8 @@ export const createTask = (
   return {
     title,
     task: async () => await proxec(command, params),
-  };
-};
+  }
+}
 
 export const createTasks = (
   title: string,
@@ -20,7 +20,7 @@ export const createTasks = (
   return {
     title,
     task: () => {
-      return new Listr(tasks, options);
+      return new Listr(tasks, options)
     },
-  };
-};
+  }
+}

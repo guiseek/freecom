@@ -33,10 +33,14 @@ module.exports = {
   ],
 
   scopes: [
-    { name: 'server', description: 'anything server specific' },
-    { name: 'client', description: 'anything client specific' },
-    { name: 'media', description: 'anything media specific' },
-    { name: 'ui-popover', description: 'anything ui-popover specific' },
+    { name: 'signaling', description: 'anything signaling specific' },
+    { name: 'peer-core', description: 'anything peer-core specific' },
+    { name: 'peer-client', description: 'anything peer-client specific' },
+    { name: 'peer-player', description: 'anything peer-player specific' },
+    { name: 'peer-phone', description: 'anything peer-phone specific' },
+    { name: 'media-core', description: 'anything media-core specific' },
+    { name: 'media-audio', description: 'anything media-audio specific' },
+    { name: 'core-entities', description: 'anything core-entities specific' },
     {
       name: 'test',
       description: 'anything test specific (e.g., jest, cypress)',
@@ -88,4 +92,4 @@ module.exports = {
   // breaklineChar: '|', // It is supported for fields body and footer.
   // footerPrefix : 'ISSUES CLOSED:'
   // askForBreakingChangeFirst : true, // default is false
-};
+}
