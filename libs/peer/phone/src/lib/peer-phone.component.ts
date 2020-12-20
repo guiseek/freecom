@@ -19,7 +19,7 @@ export class PeerPhoneComponent implements OnInit, OnDestroy {
   constructor(
     private ref: MatDialogRef<PeerPhoneComponent, RTCPeerConnection>,
     @Inject(PEER_PHONE_CONFIG) private config: PeerPhoneConfig,
-    @Inject(MAT_DIALOG_DATA) public data: Pick<User, 'name' | 'uuid'>
+    @Inject(MAT_DIALOG_DATA) public data: User
   ) {}
 
   ngOnInit(): void {
