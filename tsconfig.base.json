@@ -21,7 +21,8 @@
       "@freecom/signaling": ["libs/signaling/src/index.ts"],
       "@freecom/peer-player": ["libs/peer/player/src/index.ts"],
       "@freecom/peer-phone": ["libs/peer/phone/src/index.ts"],
-      "@freecom/core-entities": ["libs/core/entities/src/index.ts"]
+      "@freecom/core-entities": ["libs/core/entities/src/index.ts"],
+      "@freecom/peer-meeting": ["libs/peer/meeting/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

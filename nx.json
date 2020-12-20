@@ -52,6 +52,9 @@
     },
     "core-entities": {
       "tags": ["type:util", "scope:core"]
+    },
+    "peer-meeting": {
+      "tags": ["side:client", "type:feat", "scope:peer"]
     }
   }
 }

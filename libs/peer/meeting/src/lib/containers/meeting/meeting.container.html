@@ -1,0 +1,20 @@
+<mat-drawer-container class="meeting-container" autosize>
+
+  <div class="meeting-sidenav-content">
+    <section>
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button>
+    </section>
+
+    <peer-configuration></peer-configuration>
+  </div>
+
+  <mat-drawer #drawer class="meeting-sidenav" position="end" mode="side">
+    <p>Auto-resizing sidenav</p>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button>
+  </mat-drawer>
+</mat-drawer-container>

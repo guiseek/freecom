@@ -36,3 +36,12 @@ body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
+
+.mat-form-field {
+  width: 100%;
+  min-width: 40px;
+}
+
+.meeting-config-container .mat-dialog-container {
+  padding: 0;
+}

@@ -1,0 +1,106 @@
+<mat-horizontal-stepper [linear]="true" #stepper>
+  <mat-step [stepControl]="rtcForm">
+    <form [formGroup]="rtcForm">
+      <ng-template matStepLabel>RTC</ng-template>
+      <div fxLayoutGap="16px" fxLayout="column">
+        <mat-form-field>
+          <mat-label>Peer Identity</mat-label>
+          <input type="text" matInput formControlName="peerIdentity" readonly />
+          <mat-hint>Para usuários autenticados</mat-hint>
+        </mat-form-field>
+        <div formArrayName="iceServers">
+          <ng-container
+            *ngFor="
+              let iceControl of rtcForm.iceServers.controls;
+              let i = index
+            "
+          >
+            <mat-form-field [formGroupName]="i">
+              <mat-label>URL</mat-label>
+              <input type="text" matInput formControlName="urls" />
+              <mat-error>Obrigatório</mat-error>
+            </mat-form-field>
+          </ng-container>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="end">
+        <button mat-button matStepperNext>Continuar</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="mediaForm">
+    <form [formGroup]="mediaForm">
+      <ng-template matStepLabel>Media</ng-template>
+      <div fxLayoutGap="16px" fxLayout="column">
+        <mat-form-field formGroupName="audio">
+          <mat-label>Áudio</mat-label>
+          <mat-select formControlName="deviceId" placeholder="">
+            <mat-option *ngFor="let opt of audioList" [value]="opt.deviceId">
+              {{ opt.label }}
+            </mat-option>
+          </mat-select>
+          <mat-error>Obrigatório</mat-error>
+        </mat-form-field>
+
+        <mat-form-field formGroupName="video">
+          <mat-label>Vídeo</mat-label>
+          <mat-select formControlName="deviceId" placeholder="">
+            <mat-option *ngFor="let opt of videoList" [value]="opt.deviceId">
+              {{ opt.label }}
+            </mat-option>
+          </mat-select>
+          <mat-error>Obrigatório</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="space-between">
+        <button mat-icon-button matStepperPrevious>
+          <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        <button mat-button matStepperNext>Continuar</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="socketForm">
+    <form [formGroup]="socketForm">
+      <ng-template matStepLabel>Socket</ng-template>
+      <div fxLayout="row" fxLayoutGap="16px" fxLayout.lt-md="column">
+        <mat-form-field fxFlex>
+          <mat-label>Host</mat-label>
+          <input type="url" matInput formControlName="host" />
+          <mat-error>Obrigatório</mat-error>
+        </mat-form-field>
+        <mat-form-field fxFlex="60px">
+          <mat-label>Port</mat-label>
+          <input type="text" matInput formControlName="port" />
+          <mat-error>Obrigatório</mat-error>
+        </mat-form-field>
+        <mat-form-field fxFlex="120px">
+          <mat-label>Path</mat-label>
+          <input type="text" matInput formControlName="path" />
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="space-between">
+        <button mat-icon-button matStepperPrevious>
+          <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        <button mat-button matStepperNext>Verificar</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Check</ng-template>
+    <ng-container *ngIf="localStream$ | async as stream">
+      <peer-player [srcObject]="stream"></peer-player>
+    </ng-container>
+
+    <p>You are now done.</p>
+    <div fxLayout="row" fxLayoutAlign="space-between">
+      <button mat-icon-button matStepperPrevious>
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+      <button mat-button (click)="onConfirm()">Concluir</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>

@@ -11,13 +11,13 @@ import { BehaviorSubject } from 'rxjs'
 import { PeerConfig, PEER_CONFIG } from './config'
 import { Inject, Injectable } from '@angular/core'
 import { ClientStore } from './client-store'
-import * as io from 'socket.io-client'
+import { io, Socket } from 'socket.io-client'
 
 @Injectable({
   providedIn: 'root',
 })
 export class ClientConnection {
-  private socket: SocketIOClient.Socket
+  private socket: Socket
 
   private peerId: string
   private peer: RTCPeerConnection
@@ -38,7 +38,7 @@ export class ClientConnection {
 
     this.logger.info(socket)
 
-    this.socket = io.connect(socket.uri)
+    this.socket = io(socket.uri)
 
     this.socket.on('connect', () => {
       this.logger.log('Socket connected. I am', this.socket.id)

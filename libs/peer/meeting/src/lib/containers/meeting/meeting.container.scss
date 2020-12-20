@@ -1,0 +1,26 @@
+:host {
+  display: block;
+  height: 100%;
+  flex: 1;
+}
+.meeting-container {
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.meeting-sidenav-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.meeting-sidenav {
+  padding: 20px;
+}

@@ -1,4 +1,8 @@
-export type SocketOptions = SocketIOClient.ConnectOpts & {
+import * as SocketIOClient from 'socket.io-client'
+
+export type SocketOptions = Partial<
+  SocketIOClient.SocketOptions & SocketIOClient.ManagerOptions
+> & {
   uri: string
 }
 

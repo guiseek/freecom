@@ -37,6 +37,7 @@ module.exports = {
     { name: 'peer-core', description: 'anything peer-core specific' },
     { name: 'peer-client', description: 'anything peer-client specific' },
     { name: 'peer-player', description: 'anything peer-player specific' },
+    { name: 'peer-meeting', description: 'anything peer-meeting specific' },
     { name: 'peer-phone', description: 'anything peer-phone specific' },
     { name: 'media-core', description: 'anything media-core specific' },
     { name: 'media-audio', description: 'anything media-audio specific' },

@@ -11,5 +11,6 @@ module.exports = {
     '<rootDir>/libs/media/core',
     '<rootDir>/libs/peer/phone',
     '<rootDir>/libs/core/entities',
+    '<rootDir>/libs/peer/meeting',
   ],
 }

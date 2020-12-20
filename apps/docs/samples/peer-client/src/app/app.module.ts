@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatButtonModule } from '@angular/material/button'
 
 import { PeerClientModule } from '@freecom/peer-client'
+import { PeerMeetingModule } from '@freecom/peer-meeting'
 import { PeerPlayerModule } from '@freecom/peer-player'
 import { PeerPhoneModule } from '@freecom/peer-phone'
 
@@ -14,14 +15,21 @@ import { PlayerComponent } from './player/player.component'
 import { PhoneComponent } from './phone/phone.component'
 import { AppRoutingModule } from './app.routing'
 import { AppComponent } from './app.component'
+import { MeetingComponent } from './meeting/meeting.component'
 
 @NgModule({
-  declarations: [AppComponent, PhoneComponent, PlayerComponent],
+  declarations: [
+    AppComponent,
+    PhoneComponent,
+    PlayerComponent,
+    MeetingComponent,
+  ],
   imports: [
     BrowserModule,
     MatIconModule,
     MatButtonModule,
     PeerPlayerModule,
+    PeerMeetingModule.forRoot(),
     PeerPhoneModule.forRoot({
       ringtones: {
         incoming: 'assets/audios/phone-ringtone_time_that_passes.ogg',

@@ -1,0 +1,7 @@
+:host {
+  display: flex;
+  max-width: 600px;
+  peer-player {
+    max-width: 100%;
+  }
+}

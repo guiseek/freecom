@@ -3,9 +3,9 @@ const {
 } = require('../../../tools/releases')
 
 const releaserc = createReleaseConfigWithScopeFilter({
-  projectScope: 'peer-meeting',
-  projectRoot: 'libs/peer/meeting',
-  buildOutput: 'dist/libs/peer/meeting',
+  projectScope: 'peer-client',
+  projectRoot: 'libs/peer/client',
+  buildOutput: 'dist/libs/peer/client',
 })
 console.log(JSON.stringify(releaserc))
 module.exports = releaserc
