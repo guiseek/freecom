@@ -6,9 +6,11 @@
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "nx": "nx",
-    "dev": "nx run-many --target serve --projects signaling,docs-samples-peer-client --maxParallel 2 --parallel",
+    "dev": "nx run-many --target serve --projects docs-samples-signaling,docs-samples-peer-client --maxParallel 2 --parallel",
     "start": "node dist/apps/api/gateway/main.js",
     "gateway": "nx run api-gateway:build --configuration=production --with-deps",
+    "build:signaling": "nx run docs-samples-signaling:build --prod --with-deps",
+    "signaling": "node dist/apps/docs/samples/signaling/main.js",
     "task": "ts-node --project tools/tsconfig.tools.json tools/tasks/init-task.ts",
     "build": "nx affected:build --prod",
     "test": "ng test",
@@ -28,7 +30,7 @@
     "update": "ng update @nrwl/workspace",
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
-    "prerelease": "nx affected:build --all",
+    "prerelease": "nx affected:build --all --prod",
     "release": "nx affected --target release --all",
     "commit": "git-cz",
     "help": "nx help"
@@ -109,6 +111,7 @@
     "commitizen": "^4.2.2",
     "cypress": "^5.5.0",
     "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^6.3.0",
     "dotenv": "6.2.0",
     "eslint": "7.10.0",
     "eslint-config-prettier": "6.0.0",
@@ -128,7 +131,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "node_modules/cz-customizable"
     },
     "cz-customizable": {
       "config": ".cz-config.js"

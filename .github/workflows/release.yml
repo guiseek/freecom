@@ -23,6 +23,8 @@ jobs:
         run: npm ci
       - name: Check Format
         run: npm run format:check
+      - name: Test Builds
+        run: npm run affected:build -- --all --prod
       - name: Build, Release on GitHub & Publish to NPM
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

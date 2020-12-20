@@ -13,6 +13,7 @@
 </section>
 <button *ngIf="active$ | async" type="button" mat-button (click)="hangUp()">
   <mat-icon>close</mat-icon>
+  <span>Fechar</span>
 </button>
 <ng-template #startTmpl>
   <div class="start">

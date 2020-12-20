@@ -28,7 +28,7 @@ export class SignalingGateway
   }
 
   @SubscribeMessage(PeerEvent.ConnectToRoom)
-  onPeerConnect(socket: Socket, data: any) {
+  onPeerConnect(socket: Socket) {
     this.logger.log(`Client ${socket.id} connected to room`)
     socket.broadcast.emit(PeerEvent.Connected, { id: socket.id })
   }
@@ -47,7 +47,7 @@ export class SignalingGateway
     client.broadcast.emit(PeerEvent.SdpAnswer, payload)
   }
 
-  handleConnection(socket: Socket, ...args: any[]) {
+  handleConnection(socket: Socket) {
     this.sockets.set(socket.id, socket.client)
 
     this.logger.connected(socket.id, this.sockets.size)

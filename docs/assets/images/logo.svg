@@ -1,102 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-<circle cx="6.451612903225806" cy="50" r="3" fill="#0b68ea">
-  <animate attributeName="r" times="0;0.5;1" values="2.4000000000000004;3.5999999999999996;2.4000000000000004" dur="2s" repeatCount="indefinite" begin="-0.5s"></animate>
-  <animate attributeName="cy" keyTimes="0;0.5;1" values="32;68;32" dur="2s" repeatCount="indefinite" begin="0s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate>
-  <animate attributeName="fill" keyTimes="0;0.5;1" values="#0b68ea;#e4f2fe;#0b68ea" dur="2s" repeatCount="indefinite" begin="-0.5s"></animate>
-</circle>
-<circle cx="6.451612903225806" cy="50" r="3" fill="#e4f2fe">
-  <animate attributeName="r" times="0;0.5;1" values="2.4000000000000004;3.5999999999999996;2.4000000000000004" dur="2s" repeatCount="indefinite" begin="-1.5s"></animate>
-  <animate attributeName="cy" keyTimes="0;0.5;1" values="32;68;32" dur="2s" repeatCount="indefinite" begin="-1s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate>
-  <animate attributeName="fill" keyTimes="0;0.5;1" values="#e4f2fe;#0b68ea;#e4f2fe" dur="2s" repeatCount="indefinite" begin="-0.5s"></animate>
-</circle>
-<circle cx="16.129032258064512" cy="50" r="3" fill="#0b68ea">
-  <animate attributeName="r" times="0;0.5;1" values="2.4000000000000004;3.5999999999999996;2.4000000000000004" dur="2s" repeatCount="indefinite" begin="-0.7s"></animate>
-  <animate attributeName="cy" keyTimes="0;0.5;1" values="32;68;32" dur="2s" repeatCount="indefinite" begin="-0.2s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate>
-  <animate attributeName="fill" keyTimes="0;0.5;1" values="#0b68ea;#e4f2fe;#0b68ea" dur="2s" repeatCount="indefinite" begin="-0.7s"></animate>
-</circle>
-<circle cx="16.129032258064512" cy="50" r="3" fill="#e4f2fe">
-  <animate attributeName="r" times="0;0.5;1" values="2.4000000000000004;3.5999999999999996;2.4000000000000004" dur="2s" repeatCount="indefinite" begin="-1.7s"></animate>
-  <animate attributeName="cy" keyTimes="0;0.5;1" values="32;68;32" dur="2s" repeatCount="indefinite" begin="-1.2s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate>
-  <animate attributeName="fill" keyTimes="0;0.5;1" values="#e4f2fe;#0b68ea;#e4f2fe" dur="2s" repeatCount="indefinite" begin="-0.7s"></animate>
-</circle>
-<circle cx="25.806451612903224" cy="50" r="3" fill="#0b68ea">
-  <animate attributeName="r" times="0;0.5;1" values="2.4000000000000004;3.5999999999999996;2.4000000000000004" dur="2s" repeatCount="indefinite" begin="-0.9s"></animate>
-  <animate attributeName="cy" keyTimes="0;0.5;1" values="32;68;32" dur="2s" repeatCount="indefinite" begin="-0.4s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate>
-  <animate attributeName="fill" keyTimes="0;0.5;1" values="#0b68ea;#e4f2fe;#0b68ea" dur="2s" repeatCount="indefinite" begin="-0.9s"></animate>
-</circle>
-<circle cx="25.806451612903224" cy="50" r="3" fill="#e4f2fe">
-  <animate attributeName="r" times="0;0.5;1" values="2.4000000000000004;3.5999999999999996;2.4000000000000004" dur="2s" repeatCount="indefinite" begin="-1.9s"></animate>
-  <animate attributeName="cy" keyTimes="0;0.5;1" values="32;68;32" dur="2s" repeatCount="indefinite" begin="-1.4s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate>
-  <animate attributeName="fill" keyTimes="0;0.5;1" values="#e4f2fe;#0b68ea;#e4f2fe" dur="2s" repeatCount="indefinite" begin="-0.9s"></animate>
-</circle>
-<circle cx="35.48387096774193" cy="50" r="3" fill="#0b68ea">
-  <animate attributeName="r" times="0;0.5;1" values="2.4000000000000004;3.5999999999999996;2.4000000000000004" dur="2s" repeatCount="indefinite" begin="-1.1s"></animate>
-  <animate attributeName="cy" keyTimes="0;0.5;1" values="32;68;32" dur="2s" repeatCount="indefinite" begin="-0.6s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate>
-  <animate attributeName="fill" keyTimes="0;0.5;1" values="#0b68ea;#e4f2fe;#0b68ea" dur="2s" repeatCount="indefinite" begin="-1.1s"></animate>
-</circle>
-<circle cx="35.48387096774193" cy="50" r="3" fill="#e4f2fe">
-  <animate attributeName="r" times="0;0.5;1" values="2.4000000000000004;3.5999999999999996;2.4000000000000004" dur="2s" repeatCount="indefinite" begin="-2.1s"></animate>
-  <animate attributeName="cy" keyTimes="0;0.5;1" values="32;68;32" dur="2s" repeatCount="indefinite" begin="-1.6s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate>
-  <animate attributeName="fill" keyTimes="0;0.5;1" values="#e4f2fe;#0b68ea;#e4f2fe" dur="2s" repeatCount="indefinite" begin="-1.1s"></animate>
-</circle>
-<circle cx="45.16129032258064" cy="50" r="3" fill="#0b68ea">
-  <animate attributeName="r" times="0;0.5;1" values="2.4000000000000004;3.5999999999999996;2.4000000000000004" dur="2s" repeatCount="indefinite" begin="-1.3s"></animate>
-  <animate attributeName="cy" keyTimes="0;0.5;1" values="32;68;32" dur="2s" repeatCount="indefinite" begin="-0.8s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate>
-  <animate attributeName="fill" keyTimes="0;0.5;1" values="#0b68ea;#e4f2fe;#0b68ea" dur="2s" repeatCount="indefinite" begin="-1.3s"></animate>
-</circle>
-<circle cx="45.16129032258064" cy="50" r="3" fill="#e4f2fe">
-  <animate attributeName="r" times="0;0.5;1" values="2.4000000000000004;3.5999999999999996;2.4000000000000004" dur="2s" repeatCount="indefinite" begin="-2.3s"></animate>
-  <animate attributeName="cy" keyTimes="0;0.5;1" values="32;68;32" dur="2s" repeatCount="indefinite" begin="-1.8s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate>
-  <animate attributeName="fill" keyTimes="0;0.5;1" values="#e4f2fe;#0b68ea;#e4f2fe" dur="2s" repeatCount="indefinite" begin="-1.3s"></animate>
-</circle>
-<circle cx="54.838709677419345" cy="50" r="3" fill="#0b68ea">
-  <animate attributeName="r" times="0;0.5;1" values="2.4000000000000004;3.5999999999999996;2.4000000000000004" dur="2s" repeatCount="indefinite" begin="-1.5s"></animate>
-  <animate attributeName="cy" keyTimes="0;0.5;1" values="32;68;32" dur="2s" repeatCount="indefinite" begin="-1s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate>
-  <animate attributeName="fill" keyTimes="0;0.5;1" values="#0b68ea;#e4f2fe;#0b68ea" dur="2s" repeatCount="indefinite" begin="-1.5s"></animate>
-</circle>
-<circle cx="54.838709677419345" cy="50" r="3" fill="#e4f2fe">
-  <animate attributeName="r" times="0;0.5;1" values="2.4000000000000004;3.5999999999999996;2.4000000000000004" dur="2s" repeatCount="indefinite" begin="-2.5s"></animate>
-  <animate attributeName="cy" keyTimes="0;0.5;1" values="32;68;32" dur="2s" repeatCount="indefinite" begin="-2s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate>
-  <animate attributeName="fill" keyTimes="0;0.5;1" values="#e4f2fe;#0b68ea;#e4f2fe" dur="2s" repeatCount="indefinite" begin="-1.5s"></animate>
-</circle>
-<circle cx="64.51612903225805" cy="50" r="3" fill="#0b68ea">
-  <animate attributeName="r" times="0;0.5;1" values="2.4000000000000004;3.5999999999999996;2.4000000000000004" dur="2s" repeatCount="indefinite" begin="-1.7s"></animate>
-  <animate attributeName="cy" keyTimes="0;0.5;1" values="32;68;32" dur="2s" repeatCount="indefinite" begin="-1.2s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate>
-  <animate attributeName="fill" keyTimes="0;0.5;1" values="#0b68ea;#e4f2fe;#0b68ea" dur="2s" repeatCount="indefinite" begin="-1.7s"></animate>
-</circle>
-<circle cx="64.51612903225805" cy="50" r="3" fill="#e4f2fe">
-  <animate attributeName="r" times="0;0.5;1" values="2.4000000000000004;3.5999999999999996;2.4000000000000004" dur="2s" repeatCount="indefinite" begin="-2.7s"></animate>
-  <animate attributeName="cy" keyTimes="0;0.5;1" values="32;68;32" dur="2s" repeatCount="indefinite" begin="-2.2s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate>
-  <animate attributeName="fill" keyTimes="0;0.5;1" values="#e4f2fe;#0b68ea;#e4f2fe" dur="2s" repeatCount="indefinite" begin="-1.7s"></animate>
-</circle>
-<circle cx="74.19354838709677" cy="50" r="3" fill="#0b68ea">
-  <animate attributeName="r" times="0;0.5;1" values="2.4000000000000004;3.5999999999999996;2.4000000000000004" dur="2s" repeatCount="indefinite" begin="-1.9s"></animate>
-  <animate attributeName="cy" keyTimes="0;0.5;1" values="32;68;32" dur="2s" repeatCount="indefinite" begin="-1.4s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate>
-  <animate attributeName="fill" keyTimes="0;0.5;1" values="#0b68ea;#e4f2fe;#0b68ea" dur="2s" repeatCount="indefinite" begin="-1.9s"></animate>
-</circle>
-<circle cx="74.19354838709677" cy="50" r="3" fill="#e4f2fe">
-  <animate attributeName="r" times="0;0.5;1" values="2.4000000000000004;3.5999999999999996;2.4000000000000004" dur="2s" repeatCount="indefinite" begin="-2.9s"></animate>
-  <animate attributeName="cy" keyTimes="0;0.5;1" values="32;68;32" dur="2s" repeatCount="indefinite" begin="-2.4s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate>
-  <animate attributeName="fill" keyTimes="0;0.5;1" values="#e4f2fe;#0b68ea;#e4f2fe" dur="2s" repeatCount="indefinite" begin="-1.9s"></animate>
-</circle>
-<circle cx="83.87096774193547" cy="50" r="3" fill="#0b68ea">
-  <animate attributeName="r" times="0;0.5;1" values="2.4000000000000004;3.5999999999999996;2.4000000000000004" dur="2s" repeatCount="indefinite" begin="-2.1s"></animate>
-  <animate attributeName="cy" keyTimes="0;0.5;1" values="32;68;32" dur="2s" repeatCount="indefinite" begin="-1.6s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate>
-  <animate attributeName="fill" keyTimes="0;0.5;1" values="#0b68ea;#e4f2fe;#0b68ea" dur="2s" repeatCount="indefinite" begin="-2.1s"></animate>
-</circle>
-<circle cx="83.87096774193547" cy="50" r="3" fill="#e4f2fe">
-  <animate attributeName="r" times="0;0.5;1" values="2.4000000000000004;3.5999999999999996;2.4000000000000004" dur="2s" repeatCount="indefinite" begin="-3.1s"></animate>
-  <animate attributeName="cy" keyTimes="0;0.5;1" values="32;68;32" dur="2s" repeatCount="indefinite" begin="-2.6s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate>
-  <animate attributeName="fill" keyTimes="0;0.5;1" values="#e4f2fe;#0b68ea;#e4f2fe" dur="2s" repeatCount="indefinite" begin="-2.1s"></animate>
-</circle>
-<circle cx="93.54838709677418" cy="50" r="3" fill="#0b68ea">
-  <animate attributeName="r" times="0;0.5;1" values="2.4000000000000004;3.5999999999999996;2.4000000000000004" dur="2s" repeatCount="indefinite" begin="-2.3s"></animate>
-  <animate attributeName="cy" keyTimes="0;0.5;1" values="32;68;32" dur="2s" repeatCount="indefinite" begin="-1.8s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate>
-  <animate attributeName="fill" keyTimes="0;0.5;1" values="#0b68ea;#e4f2fe;#0b68ea" dur="2s" repeatCount="indefinite" begin="-2.3s"></animate>
-</circle>
-<circle cx="93.54838709677418" cy="50" r="3" fill="#e4f2fe">
-  <animate attributeName="r" times="0;0.5;1" values="2.4000000000000004;3.5999999999999996;2.4000000000000004" dur="2s" repeatCount="indefinite" begin="-3.3s"></animate>
-  <animate attributeName="cy" keyTimes="0;0.5;1" values="32;68;32" dur="2s" repeatCount="indefinite" begin="-2.8s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate>
-  <animate attributeName="fill" keyTimes="0;0.5;1" values="#e4f2fe;#0b68ea;#e4f2fe" dur="2s" repeatCount="indefinite" begin="-2.3s"></animate>
-</circle>
+<svg width="216" height="216" viewBox="0 0 216 216" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M25.5102 47.8946C40.9877 36.8704 183.016 36.6856 193.108 50.7347C203.199 64.7837 204.451 159.892 188.251 167.623C172.051 175.353 38.3577 180.302 25.5102 166.371C12.6627 152.439 9.09162 59.6582 25.5102 47.8946V47.8946Z"
+    fill="#191919" />
+  <path
+    d="M25.0153 48.0089C40.4928 36.9847 182.521 36.7998 192.613 50.8489C202.704 64.898 203.956 160.007 187.756 167.737C171.556 175.467 37.8628 180.416 25.0153 166.485C12.1678 152.553 8.59674 59.7724 25.0153 48.0089Z"
+    fill="#448AFF" />
+  <g filter="url(#filter0_d)">
+    <path
+      d="M95.3102 181.924C30.6946 181.924 23.1407 173.731 20.5275 170.95C15.2507 165.228 11.4611 151.96 9.28487 131.517C7.37749 113.645 7.22624 93.4701 8.87314 77.5472C10.8309 58.6162 14.9818 47.1384 21.5694 42.4413L25.5102 47.8946L21.6114 42.4161C24.6447 40.2567 31.5264 37.1393 56.2299 35.0135C71.8671 33.6691 91.4535 33.0137 111.384 33.1901C131.92 33.3918 151.162 34.4505 165.631 36.131C189.999 39.0383 195.939 43.1555 198.561 46.8107C204.913 55.6585 206.653 80.841 207.123 95.0581C207.896 118.518 206.216 140.894 202.611 154.901C199.956 165.253 196.309 171.219 191.133 173.681C179.949 179.016 133.912 181.47 105.696 181.823C102.088 181.89 98.6265 181.924 95.3102 181.924ZM27.409 48.3983C26.2073 48.5411 19.5439 57.1122 17.2836 78.9336C15.7291 93.9742 15.8804 113.098 17.6953 130.088C19.9136 150.918 24.5771 163.842 26.4509 165.825C29.8119 168.808 56.9358 175.085 106.637 174.396C149.759 173.799 176.932 171.077 182.293 168.606C191.57 167.38 194.587 158.674 197.032 144.801C199.553 130.71 200.452 110.561 199.503 90.8989C198.461 69.3379 194.562 53.692 192.772 50.8519C188.831 47.7682 159.262 40.8863 108.948 40.6174C61.5908 40.3737 31.4842 45.5582 27.409 48.3983Z"
+      fill="#191919" />
+  </g>
+  <g filter="url(#filter1_d)">
+    <path
+      d="M70.8839 80.4797C65.355 86.7564 65.0021 129.45 72.1359 135.726C75.6565 138.827 126.189 138.6 128.685 135.726C131.181 132.853 131.357 119.047 134.214 121.913C137.071 124.778 145.978 132.5 148.666 134.466C151.355 136.432 154.548 137.239 155.624 130.878C156.691 124.778 156.338 84.4204 155.8 80.1099C155.313 76.1859 150.624 76.522 147.591 79.3957C144.557 82.2694 135.634 89.9829 133.5 91.9491C131.365 93.9153 131.534 82.0845 128.509 79.5722C125.484 77.0598 75.5221 75.2197 70.8839 80.4797V80.4797Z"
+      fill="white" />
+  </g>
+  <defs>
+    <filter id="filter0_d" x="3.73779" y="33.1619" width="207.57" height="156.762" filterUnits="userSpaceOnUse"
+      color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+      <feOffset dy="4" />
+      <feGaussianBlur stdDeviation="2" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+    </filter>
+    <filter id="filter1_d" x="62.7554" y="77.101" width="97.5601" height="68.8666" filterUnits="userSpaceOnUse"
+      color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+      <feOffset dy="4" />
+      <feGaussianBlur stdDeviation="2" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+    </filter>
+  </defs>
 </svg>

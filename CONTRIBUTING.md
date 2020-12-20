@@ -52,7 +52,19 @@ Se você gostaria de _implementar_ um novo recurso, considere o tamanho da alter
 
 - **Pequenos recursos** podem ser criados e diretamente [enviados como um pull request](#submit-pr).
 
-## <a name="submit-pr"></a>
+## <a name="submit-pr"></a> Diretrizes de submissão
+
+### Enviando um problema
+
+Antes de enviar um problema, verifique issues abertas ou recentemente fechadas, talvez já exista uma issue para o seu problema e a discussão pode informá-lo sobre as soluções alternativas disponíveis.
+
+Queremos corrigir todos os problemas o mais rápido possível, mas antes de corrigir um bug, precisamos reproduzi-lo e confirmá-lo. Para reproduzir bugs, exigimos que você forneça uma reprodução mínima. Ter um cenário reproduzível mínimo nos dá uma riqueza de informações importantes, sem ir e voltar para você com perguntas adicionais.
+
+Uma reprodução mínima nos permite confirmar rapidamente um bug (ou apontar um problema de codificação), bem como confirmar que estamos corrigindo o problema certo.
+
+Infelizmente, não podemos investigar / corrigir bugs sem uma reprodução mínima, então, se não recebermos uma resposta sua, vamos encerrar um problema que não tem informações suficientes para ser reproduzido.
+
+Você pode registrar novos problemas selecionando um dos nossos [novos modelos de problemas](https://github.com/guiseek/freecom/issues/new/choose) e preenchendo o modelo de problemas.
 
 > # Em desenvolvimento
 >

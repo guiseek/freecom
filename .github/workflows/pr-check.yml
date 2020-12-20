@@ -19,4 +19,4 @@ jobs:
       - name: Check Format
         run: npm run format:check
       - name: Test Builds
-        run: npm run affected:build -- --all
+        run: npm run affected:build -- --all --prod
