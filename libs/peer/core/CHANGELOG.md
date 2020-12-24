@@ -1,3 +1,13 @@
+## [1.0.1](https://github.com/guiseek/freecom/compare/peer-core/v1.0.0...peer-core/v1.0.1) (2020-12-24)
+
+### Documentation
+
+- contributing ([d5c06ff](https://github.com/guiseek/freecom/commit/d5c06ffb0c470ae44492afe829215445e868a670))
+
+### Miscellaneous
+
+- Create CNAME ([4f14948](https://github.com/guiseek/freecom/commit/4f14948c813cebcf63cf044a66c4d7d76d354ed2))
+
 # 1.0.0 (2020-12-19)
 
 ### Bug Fixes
