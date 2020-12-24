@@ -72,15 +72,15 @@ Você pode registrar novos problemas selecionando um dos nossos [novos modelos d
 
 Antes de enviar sua solicitação de pull (PR), considere as seguintes diretrizes:
 
-1. Pesquise no [GitHub](https://github.com/huiseek/freecom/pulls) um PR aberto ou fechado relacionado ao seu envio.
+1. Pesquise no [GitHub](https://github.com/guiseek/freecom/pulls) um PR aberto ou fechado relacionado ao seu envio.
    Você não quer duplicar os esforços existentes.
 
 2. Certifique-se de que um problema descreve o problema que você está corrigindo ou documenta o design do recurso que você deseja adicionar.
    Discutir o design antecipadamente ajuda a garantir que estamos prontos para aceitar seu trabalho.
 
-3. Faça um fork o repo guiseek/freecom.
+3. Faça um fork do repositório guiseek/freecom.
 
-4. Faça suas alterações em um novo branch git:
+4. Faça suas alterações em um novo branch:
 
    ```shell
    git checkout -b my-fix-branch master
@@ -109,7 +109,7 @@ Antes de enviar sua solicitação de pull (PR), considere as seguintes diretrize
 
 ### Revisão de uma solicitação pull
 
-A equipe Freecom reserva-se o direito de não aceitar solicitações de pull de membros da comunidade que não tenham sido bons cidadãos da comunidade. Tal comportamento inclui não seguir o [código de conduta Freecom](https://github.com/angular/code-of-conduct) e se aplica dentro ou fora dos canais gerenciados Freecom.
+A equipe Freecom reserva-se o direito de não aceitar solicitações de pull de membros da comunidade que não tenham sido bons cidadãos da comunidade. Tal comportamento inclui não seguir o [código de conduta Freecom](CODE_OF_CONDUCT.md) e se aplica dentro ou fora dos canais gerenciados Freecom.
 
 #### Como abordar o feedback da revisão
 
