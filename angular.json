@@ -109,6 +109,7 @@
             "aot": true,
             "assets": [
               "apps/docs/samples/peer-client/src/favicon.ico",
+              "apps/docs/samples/peer-client/src/CNAME",
               "apps/docs/samples/peer-client/src/assets"
             ],
             "styles": ["apps/docs/samples/peer-client/src/styles.scss"],
